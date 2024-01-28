@@ -13,7 +13,7 @@ const Weekdays = Object.freeze({
 } as const)
 
 export default class ManagesFrequencies implements ManagesFrequenciesContract {
-  public expression = '* * * * *'
+  public expression = '* * * * * *'
 
   protected currentTimezone = 'UTC'
 
@@ -29,6 +29,18 @@ export default class ManagesFrequencies implements ManagesFrequenciesContract {
     segments[position] = String(value)
 
     return this.cron(segments.join(' '))
+  }
+
+  public everySecond() {
+    return this.spliceIntoPosition(0, '0/1')
+  }
+
+  public everyThreeSeconds() {
+    return this.spliceIntoPosition(0, '0/3')
+  }
+
+  public everyFiveSeconds() {
+    return this.spliceIntoPosition(0, '0/5')
   }
 
   public everyMinute() {

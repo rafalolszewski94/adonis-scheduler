@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  cron:
+    specifier: ^3.1.6
+    version: 3.1.6
   luxon:
     specifier: ^3.4.2
     version: 3.4.4
@@ -1537,6 +1540,10 @@ packages:
       '@types/node': 20.11.3
     dev: true
 
+  /@types/luxon@3.3.8:
+    resolution: {integrity: sha512-jYvz8UMLDgy3a5SkGJne8H7VA7zPV2Lwohjx0V8V31+SqAjNmurWMkk9cQhfvlcnXWudBpK9xPM1n4rljOcHYQ==}
+    dev: false
+
   /@types/luxon@3.4.1:
     resolution: {integrity: sha512-m1KQEZZCITtheRhMVq5jDvAl0HwFhunLs7x6tpFFvUTJpKfmewS/Ymg+YA97/s8w1I1nC4pJyi0aAnn+vf3yew==}
     dev: true
@@ -2846,6 +2853,13 @@ packages:
       nested-error-stacks: 2.1.1
       p-event: 4.2.0
     dev: true
+
+  /cron@3.1.6:
+    resolution: {integrity: sha512-cvFiQCeVzsA+QPM6fhjBtlKGij7tLLISnTSvFxVdnFGLdz+ZdXN37kNe0i2gefmdD17XuZA6n2uPVwzl4FxW/w==}
+    dependencies:
+      '@types/luxon': 3.3.8
+      luxon: 3.4.4
+    dev: false
 
   /cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}

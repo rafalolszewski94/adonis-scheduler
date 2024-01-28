@@ -1,6 +1,7 @@
 import { test } from '@japa/runner'
 import execa from 'execa'
 import cron from 'node-cron'
+import { CronJob } from 'cron'
 import sinon from 'sinon'
 
 import Scheduler from '../src/scheduler'

@@ -1,5 +1,6 @@
 import execa from 'execa'
 import cron from 'node-cron'
+import { CronJob } from 'cron'
 
 import { ApplicationContract } from '@ioc:Adonis/Core/Application'
 import { ScheduleContract, SchedulerContract } from '@ioc:Verful/Scheduler'
@@ -48,8 +49,8 @@ export default class Scheduler implements SchedulerContract {
 
   public start() {
     this.app.logger.info('Schedule processing started')
-    for (const event of this.events)
-      cron.schedule(event.expression, async () => {
+    for (const event of this.events) {
+      const job = new CronJob(event.expression, async () => {
         for (const filter of event.filters) {
           if (!(await filter())) return
         }
@@ -60,5 +61,7 @@ export default class Scheduler implements SchedulerContract {
 
         return await event.command()
       })
+      job.start()
+    }
   }
 }
