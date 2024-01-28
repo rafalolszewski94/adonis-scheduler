@@ -39,9 +39,6 @@
     "build/instructions.md"
   ],
   "scripts": {
-    "pretest": "pnpm lint",
-    "test": "node --require=@adonisjs/require-ts/build/register bin/test.ts",
-    "coverage": "nyc pnpm test",
     "clean": "del-cli build",
     "copyfiles": "copyfiles \"templates/**/*.txt\" \"instructions.md\" build",
     "compile": "pnpm lint && pnpm clean && tsc",
