@@ -1,6 +1,5 @@
-import execa from 'execa'
-import cron from 'node-cron'
 import { CronJob } from 'cron'
+import execa from 'execa'
 
 import { ApplicationContract } from '@ioc:Adonis/Core/Application'
 import { ScheduleContract, SchedulerContract } from '@ioc:Verful/Scheduler'
