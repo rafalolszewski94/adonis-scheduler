@@ -1,4 +1,4 @@
-declare module '@ioc:Verful/Scheduler' {
+declare module '@ioc:rafalolszewski94/Scheduler' {
   import { DateTime } from 'luxon'
 
   export type ScheduleHandler = () => void

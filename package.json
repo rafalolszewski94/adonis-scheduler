@@ -1,5 +1,5 @@
 {
-  "name": "@verful/scheduler",
+  "name": "@rafalolszewski94/scheduler",
   "description": "Easily manage scheduled tasks in AdonisJS",
   "version": "1.6.0",
   "keywords": [
@@ -13,13 +13,13 @@
     "name": "Arthur Rezende",
     "email": "arthur-er@protonmail.com"
   },
-  "homepage": "https://github.com/verful/adonis-scheduler#readme",
+  "homepage": "https://github.com/rafalolszewski94/adonis-scheduler#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/verful/adonis-scheduler.git"
+    "url": "git+https://github.com/rafalolszewski94/adonis-scheduler.git"
   },
   "bugs": {
-    "url": "https://github.com/verful/adonis-scheduler/issues"
+    "url": "https://github.com/rafalolszewski94/adonis-scheduler/issues"
   },
   "engines": {
     "node": ">=18"
@@ -112,12 +112,12 @@
         }
       ]
     },
-    "types": "@verful/scheduler",
+    "types": "@rafalolszewski94/scheduler",
     "providers": [
-      "@verful/scheduler"
+      "@rafalolszewski94/scheduler"
     ],
     "commands": [
-      "@verful/scheduler/build/commands"
+      "@rafalolszewski94/scheduler/build/commands"
     ]
   },
   "eslintConfig": {

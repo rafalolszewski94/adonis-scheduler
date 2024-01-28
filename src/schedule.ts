@@ -1,7 +1,7 @@
 import { DateTime } from 'luxon'
 
 import { ApplicationContract } from '@ioc:Adonis/Core/Application'
-import { Condition, ScheduleContract, ScheduleHandler, Time } from '@ioc:Verful/Scheduler'
+import { Condition, ScheduleContract, ScheduleHandler, Time } from '@ioc:rafalolszewski94/Scheduler'
 
 import ManagesFrequencies from './manages_frequencies'
 

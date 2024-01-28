@@ -11,6 +11,6 @@ export default class ProcessSchedule extends BaseCommand {
   }
 
   public async run() {
-    this.application.container.use('Verful/Scheduler').start()
+    this.application.container.use('rafalolszewski94/Scheduler').start()
   }
 }

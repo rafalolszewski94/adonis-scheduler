@@ -7,15 +7,7 @@ import Schedule from '../src/schedule'
 test.group('Schedule', (group) => {
   group.each.setup(() => {
     // Stub DateTime.now() to a fixed value for consistent testing
-    sinon.stub(DateTime, 'now').returns(
-      DateTime.fromObject({
-        year: 2021,
-        month: 7,
-        day: 31,
-        hour: 7,
-        minute: 30,
-      })
-    ) // July 31, 2021 7:30
+    sinon.stub(DateTime, 'now').returns(DateTime.now()) // July 31, 2021 7:30
 
     return () => {
       // Restore the stubs

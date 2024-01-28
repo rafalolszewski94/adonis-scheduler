@@ -1,4 +1,4 @@
-import Scheduler from '@ioc:Verful/Scheduler'
+import Scheduler from '@ioc:rafalolszewski94/Scheduler'
 
 /*
 |--------------------------------------------------------------------------

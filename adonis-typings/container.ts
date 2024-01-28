@@ -1,7 +1,7 @@
 declare module '@ioc:Adonis/Core/Application' {
-  import { SchedulerContract } from '@ioc:Verful/Scheduler'
+  import { SchedulerContract } from '@ioc:rafalolszewski94/Scheduler'
 
   export interface ContainerBindings {
-    'Verful/Scheduler': SchedulerContract
+    'rafalolszewski94/Scheduler': SchedulerContract
   }
 }

@@ -2,7 +2,7 @@ import { CronJob } from 'cron'
 import execa from 'execa'
 
 import { ApplicationContract } from '@ioc:Adonis/Core/Application'
-import { ScheduleContract, SchedulerContract } from '@ioc:Verful/Scheduler'
+import { ScheduleContract, SchedulerContract } from '@ioc:rafalolszewski94/Scheduler'
 
 import Schedule from './schedule'
 

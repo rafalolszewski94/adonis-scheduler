@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon'
 
-import { ManagesFrequenciesContract, Time } from '@ioc:Verful/Scheduler'
+import { ManagesFrequenciesContract, Time } from '@ioc:rafalolszewski94/Scheduler'
 
 const Weekdays = Object.freeze({
   MONDAY: 1,

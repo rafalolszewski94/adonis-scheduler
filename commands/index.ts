@@ -3,4 +3,4 @@
  * ex: '@org/package/build/commands/Command'
  */
 
-export default ['@verful/scheduler/build/commands/scheduler_work']
+export default ['@rafalolszewski94/scheduler/build/commands/scheduler_work']

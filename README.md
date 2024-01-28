@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/verful/adonis-scheduler/raw/main/.github/banner.png" width="1200px">
+  <img src="https://github.com/rafalolszewski94/adonis-scheduler/raw/main/.github/banner.png" width="1200px">
 </div>
 
 
@@ -16,29 +16,29 @@
 
 
 ## **Pre-requisites**
-The `@verful/scheduler` package requires `@adonisjs/core >= 5.9.0`
+The `@rafalolszewski94/scheduler` package requires `@adonisjs/core >= 5.9.0`
 
 ## **Setup**
 
 Install the package from the npm registry as follows.
 
 ```
-npm i @verful/scheduler
+npm i @rafalolszewski94/scheduler
 # or
-yarn add @verful/scheduler
+yarn add @rafalolszewski94/scheduler
 ```
 
 Next, configure the package by running the following ace command.
 
 ```
-node ace configure @verful/scheduler
+node ace configure @rafalolszewski94/scheduler
 ```
 
 ## **Defining Scheduled Tasks**
 You may define all of your scheduled tasks in the `start/tasks.ts` preloaded file. To get started, let's take a look at an example. In this example, we will schedule a closure to be called every day at midnight. Within the closure we will execute a database query to clear a table:
 
 ```typescript
-import Scheduler from '@ioc:Verful/Scheduler'
+import Scheduler from '@ioc:rafalolszewski94/Scheduler'
 import Database from '@ioc:Adonis/Lucid/Database'
 
 Scheduler.call(async () => {
@@ -52,7 +52,7 @@ Scheduler.call(async () => {
 In addition to scheduling closures, you may also schedule Ace commands and system commands. For example, you may use the command method to schedule an Ace command using the commands name.
 
 ```typescript
-import Scheduler from '@ioc:Verful/Scheduler'
+import Scheduler from '@ioc:rafalolszewski94/Scheduler'
 
 Scheduler.command('queue:flush').everyFiveMinutes()
 ```
@@ -62,7 +62,7 @@ Scheduler.command('queue:flush').everyFiveMinutes()
 The `exec` method may be used to issue a command to the operating system:
 
 ```typescript
-import Scheduler from '@ioc:Verful/Scheduler'
+import Scheduler from '@ioc:rafalolszewski94/Scheduler'
 
 Scheduler.exec('node script.js').daily()
 ```
@@ -114,7 +114,7 @@ We've already seen a few examples of how you may configure a task to run at spec
 These methods may be combined with additional constraints to create even more finely tuned schedules that only run on certain days of the week. For example, you may schedule a command to run weekly on Monday:
 
 ```typescript
-import Scheduler from '@ioc:Verful/Scheduler'
+import Scheduler from '@ioc:rafalolszewski94/Scheduler'
 
 // Run once per week on Monday at 1 PM...
 Scheduler.call(() => {
@@ -153,7 +153,7 @@ A list of additional schedule constraints may be found below:
 The `days` method may be used to limit the execution of a task to specific days of the week. For example, you may schedule a command to run hourly on Sundays and Wednesdays:
 
 ```typescript
-import Scheduler from '@ioc:Verful/Scheduler'
+import Scheduler from '@ioc:rafalolszewski94/Scheduler'
 
 Scheduler.command('emails:send')
          .hourly()
@@ -165,7 +165,7 @@ Scheduler.command('emails:send')
 The `between` method may be used to limit the execution of a task based on the time of day:
 
 ```typescript
-import Scheduler from '@ioc:Verful/Scheduler'
+import Scheduler from '@ioc:rafalolszewski94/Scheduler'
 
 Scheduler.command('emails:send')
          .hourly()
@@ -175,7 +175,7 @@ Scheduler.command('emails:send')
 Similarly, the `unlessBetween` method can be used to exclude the execution of a task for a period of time:
 
 ```typescript
-import Scheduler from '@ioc:Verful/Scheduler'
+import Scheduler from '@ioc:rafalolszewski94/Scheduler'
 
 Scheduler.command('emails:send')
          .hourly()
@@ -187,7 +187,7 @@ Scheduler.command('emails:send')
 The `when` method may be used to limit the execution of a task based on the result of a given truth test. In other words, if the given closure returns `true`, the task will execute as long as no other constraining conditions prevent the task from running:
 
 ```typescript
-import Scheduler from '@ioc:Verful/Scheduler'
+import Scheduler from '@ioc:rafalolszewski94/Scheduler'
 
 Scheduler.command('emails:send')
          .daily()
@@ -197,7 +197,7 @@ Scheduler.command('emails:send')
 The `skip` method may be seen as the inverse of `when`. If the `skip` method returns `true`, the scheduled task will not be executed:
 
 ```typescript
-import Scheduler from '@ioc:Verful/Scheduler'
+import Scheduler from '@ioc:rafalolszewski94/Scheduler'
 
 Scheduler.command('emails:send')
          .daily()
@@ -211,7 +211,7 @@ When using chained when methods, the scheduled command will only execute if all 
 The environments method may be used to execute tasks only on the given environments (as defined by the NODE_ENV environment variable):
 
 ```typescript
-import Scheduler from '@ioc:Verful/Scheduler'
+import Scheduler from '@ioc:rafalolszewski94/Scheduler'
 
 Scheduler.command('emails:send')
          .daily()
@@ -222,10 +222,10 @@ Scheduler.command('emails:send')
 
 Run the `scheduler:work` ace command, it doesn't need to be put into a cron job, as the scheduler will process the jobs as the time passes
 
-[npm-image]: https://img.shields.io/npm/v/@verful/scheduler.svg?style=for-the-badge&logo=**npm**
-[npm-url]: https://npmjs.org/package/@verful/scheduler "npm"
+[npm-image]: https://img.shields.io/npm/v/@rafalolszewski94/scheduler.svg?style=for-the-badge&logo=**npm**
+[npm-url]: https://npmjs.org/package/@rafalolszewski94/scheduler "npm"
 
-[license-image]: https://img.shields.io/npm/l/@verful/scheduler?color=blueviolet&style=for-the-badge
+[license-image]: https://img.shields.io/npm/l/@rafalolszewski94/scheduler?color=blueviolet&style=for-the-badge
 [license-url]: LICENSE.md "license"
 
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
